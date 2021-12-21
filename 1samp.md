@@ -7,23 +7,23 @@ permalink: /Python/
 # [function](https://function_link)
 ---
 
-Description. See [function_main.ipynb](https://function_main.ipynb) for a notebook of given examples. 
+Description. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
-    import module as m
+    import cohens_d as cD
 
-[outarg = m.function(inarg1, inarg2)](#a)
+[outarg = cD.function(inarg1, inarg2)](#a)
 
-[outarg = m.function(inarg1, inarg2, Name=Value)](#b)
+[outarg = cD.function(inarg1, inarg2, Name=Value)](#b)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = m.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
+[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
 
 ### B 
-[outarg](#outarg) = m.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
 
 ## Examples 
 ---
