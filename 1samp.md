@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Python
-permalink: /Python/
 ---
 
 # [function](https://function_link)
