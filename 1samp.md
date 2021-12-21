@@ -3,7 +3,7 @@ layout: page
 title: Python
 ---
 
-# [function](https://function_link)
+# [cohensd_1samp](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/cohens_d.py)
 ---
 
 Description. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
