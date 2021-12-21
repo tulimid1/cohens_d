@@ -6,85 +6,91 @@ title: Python
 # [cohensd_2paired](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/cohens_d.py)
 ---
 
-Description. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
+Calculate cohen's d for 2 paired samples. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
     import cohens_d as cD
 
-[outarg = cD.function(inarg1, inarg2)](#a)
+[d = cD.cohensd_2paired(pre, post, r)](#a)
 
-[outarg = cD.function(inarg1, inarg2, Name=Value)](#b)
+[d = cD.cohensd_2paired(pre, post, r, Name=Value)](#b)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
+[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [r](#r)) returns cohen's d for 2 paired samples. [example](#example-1)
 
 ### B 
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [Name=Value](#name-value-arguments)) returns cohen's d for 2 paired samples with additional options specified by one or more name-value pair arguments. For example, you can compare to a mean. [example](#example-2)
 
 ## Examples 
 ---
 ### Example 1
-Description 
+Generate some random data and find cohen's d. 
 
-    CODE
+    mu = np.array([3, 5])
+    sigma = np.array([[1, 0.6], [0.6, 3]])
+    data = np.random.multivariate_normal(mu, sigma, (100,))
+    cD.cohensd_2paired(data[:,0], data[:,1], stats.pearsonr(data[:,0], data[:,1])[0])
 
-![FIG1](/assets/fig1Py.png)
+d = 1.4798889031781874
 
 ### Example 2 
-Description
+Generate some random data and calculate cohen's d with mean of 15. 
 
-    CODE
+    mu = np.array([3, 5])
+    sigma = np.array([[1, 0.6], [0.6, 3]])
+    data = np.random.multivariate_normal(mu, sigma, (100,))
+    cD.cohensd_2paired(data[:,0], data[:,1], stats.pearsonr(data[:,0], data[:,1])[0], mu=15)
     
-![FIG2](/assets/fig2Py.png)
+d = 11.677274518688368
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```pre```
+Pre data vector
 
-Long description
+Vector of pre data. 
 
-Data Types: (X, Y)
+Data Types: (numeric, vector)
 
-### ```inarg2```
-Short description
+### ```post```
+Post data vector. 
 
-Long description
+Vector of post data
 
-Data Types: (X, Y)
+Data Types: (numeric, vector)
+
+### `r`
+Correlation of pre and post. 
+
+Pearson's correlation (r) of pre and post data. 
+
+Data Types: (numeric, scalar)
 
 ### Name-Value Arguments
 
 Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. You can specify several name and value pair arguments in any order as ```Name1=Value1,...,NameN=ValueN```. 
 
-**Example**: ```name1=value1, name2=value2``` specifies blah blah blah . 
+**Example**: ```mu=15``` specifies compare difference in pre and post against mean of 15. 
 
-### ```name1```
-Short description (default=X)
+### ```mu```
+Mean to compare against (default=0)
 
-Long description
+Mean to compare difference of [pre](#pre) and [post](#post) data vectors against. 
 
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (scalar, numeric, float)
 
 ## Output
 ---
 
-### ```outarg```
-Short description
+### ```d```
+Effect size. 
 
-Long description 
+Cohen's d effect size for 2 paired samples. 
 
-Data Types: (X, Y)
+Data Types: (scalar, float, numeric)
 
 ## More About 
 ---
