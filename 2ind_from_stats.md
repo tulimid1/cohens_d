@@ -6,85 +6,70 @@ title: Python
 # [cohensd_2ind_from_stats](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/cohens_d.py)
 ---
 
-Description. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
+Calculate cohen's d for 2 independent samples from the group statistics. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
     import cohens_d as cD
 
-[outarg = cD.function(inarg1, inarg2)](#a)
-
-[outarg = cD.function(inarg1, inarg2, Name=Value)](#b)
+[d = cD.cohensd_2ind_from_stats(mu1, mu2. std1, std2, n1, n2)](#a)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
-
-### B 
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[d](#d) = cD.cohensd_2ind_from_stats([mu1](#mu1), [mu2](#mu2), [std1](#std1), [std2](#std2), [n1](#n1), [n2](#n2)) returns cohen's d for 2 independent samples from statistics. [example](#example-1)
 
 ## Examples 
 ---
 ### Example 1
-Description 
+Generate some arbitrary parameters and find cohen's d.  
 
-    CODE
+    mu1, mu2, std1, std2, n1, n2 = 10, 5, 1, 1.5, 100, 105
+    cD.cohensd_2ind_from_stats(mu1=mu1, mu2=mu2, std1=std1, std2=std2, n1=n1, n2=n2)
 
-![FIG1](/assets/fig1Py.png)
-
-### Example 2 
-Description
-
-    CODE
-    
-![FIG2](/assets/fig2Py.png)
+d = 3.9038750287682418
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```mu1```
+Mean of group 1. 
 
-Long description
+Data Types: (scalar, float)
 
-Data Types: (X, Y)
+### ```mu2```
+Mean of group 2. 
 
-### ```inarg2```
-Short description
+Data Types: (scalar, float)
 
-Long description
+### ```std1```
+Standard deviation of group 1.
 
-Data Types: (X, Y)
+Data Types: (scalar, float)
 
-### Name-Value Arguments
+### ```std2```
+Standard deviation of group 2. 
 
-Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. You can specify several name and value pair arguments in any order as ```Name1=Value1,...,NameN=ValueN```. 
+Data Types: (scalar, float)
 
-**Example**: ```name1=value1, name2=value2``` specifies blah blah blah . 
+### ```n1```
+Sample size of group 1. 
 
-### ```name1```
-Short description (default=X)
+Data Types: (scalar, float)
 
-Long description
+### ```n2```
+Sample size of group 2. 
 
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (scalar, float)
 
 ## Output
 ---
 
-### ```outarg```
-Short description
+### ```d```
+Effect size. 
 
-Long description 
+Cohen's d effet size for 2 independent samples from statistics. 
 
-Data Types: (X, Y)
+Data Types: (scalar, float)
 
 ## More About 
 ---
