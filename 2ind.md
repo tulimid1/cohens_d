@@ -6,85 +6,57 @@ title: Python
 # [cohensd_2ind](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/cohens_d.py)
 ---
 
-Description. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
+Calculate cohen's d for 2 independent samples. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
     import cohens_d as cD
 
-[outarg = cD.function(inarg1, inarg2)](#a)
-
-[outarg = cD.function(inarg1, inarg2, Name=Value)](#b)
+[d = cD.cohensd_2ind(inarg1, inarg2)](#a)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
-
-### B 
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[d](#d) = cD.cohensd_2ind([group1](#group1), [group2](#group2)) returns cohen's d for 2 independent samples. [example](#example-1)
 
 ## Examples 
 ---
 ### Example 1
-Description 
+Generate some random data and find cohen's d.  
 
-    CODE
-
-![FIG1](/assets/fig1Py.png)
-
-### Example 2 
-Description
-
-    CODE
+    import numpy as np 
     
-![FIG2](/assets/fig2Py.png)
+    group1 = np.random.normal(0, 1, (100,))
+    group2 = np.random.normal(1, 1, (150,))
+    cD.cohensd_2ind(group1, group2)
+
+d = 1.035420225827119
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```group1```
+Data vector for group 1. 
 
-Long description
+Vector of data to calculate cohen's d for 2 independent samples. 
 
-Data Types: (X, Y)
+Data Types: (numeric, vector)
 
-### ```inarg2```
-Short description
+### ```group2```
+Data vector for group 2. 
 
-Long description
+Vector of data to calculate cohen's d for 2 independent samples. 
 
-Data Types: (X, Y)
-
-### Name-Value Arguments
-
-Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. You can specify several name and value pair arguments in any order as ```Name1=Value1,...,NameN=ValueN```. 
-
-**Example**: ```name1=value1, name2=value2``` specifies blah blah blah . 
-
-### ```name1```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (numeric, vector)
 
 ## Output
 ---
 
-### ```outarg```
-Short description
+### ```d```
+Effect size. 
 
-Long description 
+Cohen's d effect size for 2 independent samples.  
 
-Data Types: (X, Y)
+Data Types: (scalar, float, numeric)
 
 ## More About 
 ---
