@@ -1,10 +1,10 @@
-def cohensd_1samp(data, mu):
+def cohensd_1samp(data, mu=0):
     '''
     Calculate cohen's d for 1 sample. 
 
     INPUTS:
     data: data vector 
-    mu: population mean 
+    mu: population mean, default=0
 
     OUTPUT:
     d: absolute cohens d
@@ -47,15 +47,15 @@ def cohensd_2ind(group1, group2):
     d = (numpy.mean(group1) - numpy.mean(group2)) / (numpy.sqrt((((len(group1) - 1) * numpy.var(group1, ddof=1)) + ((len(group2) - 1) * numpy.var(group2, ddof=2))) / (len(group1) + len(group2) - 2)))
     return numpy.abs(d)
 
-def cohensd_2paired(pre, post, mu, r):
+def cohensd_2paired(pre, post, r, mu=0):
     '''
     Calculate cohen's d for 2 paired samples 
 
     INPUTS:
     pre: pre data vector 
     post: post data vector 
-    mu: mean to compare 
     r: pearsons corrleation
+    mu: mean to compare, default=0
 
     OUTPUT:
     d: absolute cohen's d 
