@@ -19,10 +19,10 @@ Calculate cohen's d for 1 sample. See [Using_cohens_d.ipynb](https://github.com/
 ## Description
 ---
 ### A
-[d](#outarg) = cD.cohensd_1samp([data](#inarg1)) returns cohen's d for 1 sample comparing to [mu](#name-value-arguments)=0. [example](#example-1)
+[d](#d) = cD.cohensd_1samp([data](#data)) returns cohen's d for 1 sample comparing to [mu](#mu)=0. [example](#example-1)
 
 ### B 
-[d](#outarg) = cD.cohensd_1samp([data](#inarg1), [Name=Value](#name-value-arguments)) returns cohen's d for 1 sample with additional options specified by one name-value pair arguments. For example, you can compare to a mean of 15 ([mu](#name-value-arguments)=15). [example](#example-2)
+[d](#d) = cD.cohensd_1samp([data](#data), [Name=Value](#name-value-arguments)) returns cohen's d for 1 sample with additional options specified by one name-value pair arguments. For example, you can compare to a mean of 15 ([mu](#mu)=15). [example](#example-2)
 
 ## Examples 
 ---
@@ -64,7 +64,7 @@ Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the
 ### ```mu```
 Mean to compare against (default=0)
 
-Value to subtract from mean of [data](#inarg1). 
+Value to subtract from mean of [data](#data). 
 
 Data Types: (scalar, float, numeric)
 
