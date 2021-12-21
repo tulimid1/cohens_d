@@ -96,6 +96,8 @@ Data Types: (scalar, float, numeric)
 ---
 [Lecture](https://github.com/joshcash9/Statistics_BME/blob/master/04_effect_power.pdf)
 
+I refrained from outputting size of effect (e.g., 'small', 'medium', 'large') because these are arbitrary and should be thought of as such. 
+
 ## Tips 
 ---
 
