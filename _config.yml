@@ -1,4 +1,4 @@
-title: "Task Name"
+title: "Cohen's D"
 author: "Duncan Tulimieri"
 description: "Duncan Tulimieri"
 
@@ -17,7 +17,6 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "m-doc.md"}
   - {file: "py-doc.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
