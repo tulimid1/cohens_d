@@ -6,91 +6,85 @@ title: Python
 # [cohensd_1samp](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/cohens_d.py)
 ---
 
-Description. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
+Calculate cohen's d for 1 sample. See [Using_cohens_d.ipynb](https://github.com/tulimid1/cohens_d/blob/main/cohens_d/Using_cohens_d.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
-    import cohens_d as cD
+     import cohens_d as cD
 
-[outarg = cD.function(inarg1, inarg2)](#a)
+[d = cD.cohensd_1samp(data)](#a)
 
-[outarg = cD.function(inarg1, inarg2, Name=Value)](#b)
+[d = cD.cohensd_1samp(data, Name=Value)](#b)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
+[d](#outarg) = cD.cohensd_1samp([data](#inarg1)) returns cohen's d for 1 sample comparing to [mu](#name-value-arguments)=0. [example](#example-1)
 
 ### B 
-[outarg](#outarg) = cD.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[d](#outarg) = cD.cohensd_1samp([data](#inarg1), [Name=Value](#name-value-arguments)) returns cohen's d for 1 sample with additional options specified by one name-value pair arguments. For example, you can compare to a mean of 15 ([mu](#name-value-arguments)=15). [example](#example-2)
 
 ## Examples 
 ---
 ### Example 1
-Description 
+Generate some random data and find cohen's d.  
 
-    CODE
+    import numpy as np 
+    
+    data = np.random.normal(0, 1, size=(100,))
+    d = cD.cohensd_1samp(data)
 
-![FIG1](/assets/fig1Py.png)
+d = 0.058009400346186867
 
 ### Example 2 
-Description
+Generate some random data and find cohen's d when comparing to mean of 15. 
 
-    CODE
+    import numpy as np 
     
-![FIG2](/assets/fig2Py.png)
+    data = np.random.normal(0, 1, size=(100,))
+    d = cD.cohensd_1samp(data, mu=15)
+    
+d = 15.881558105056795
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```data```
+Data vector. 
 
-Long description
+Vector of data to calculate 1 sample cohen's d. 
 
-Data Types: (X, Y)
-
-### ```inarg2```
-Short description
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (numeric)
 
 ### Name-Value Arguments
 
 Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. You can specify several name and value pair arguments in any order as ```Name1=Value1,...,NameN=ValueN```. 
 
-**Example**: ```name1=value1, name2=value2``` specifies blah blah blah . 
+**Example**: ```mu=15``` specifies comparison to a mean of 15. 
 
-### ```name1```
-Short description (default=X)
+### ```mu```
+Mean to compare against (default=0)
 
-Long description
+Value to subtract from mean of [data](#inarg1). 
 
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (scalar, float, numeric)
 
 ## Output
 ---
 
-### ```outarg```
-Short description
+### ```d```
+Effect size. 
 
-Long description 
+Cohen's d effect size for 1 sample test. 
 
-Data Types: (X, Y)
+Data Types: (scalar, float, numeric)
 
 ## More About 
 ---
+[Lecture](https://github.com/joshcash9/Statistics_BME/blob/master/04_effect_power.pdf)
 
 ## Tips 
 ---
+
 
 ## Issues and Discussion 
 ---
