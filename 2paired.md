@@ -88,6 +88,7 @@ Data Types: (X, Y)
 
 ## More About 
 ---
+[Lecture](https://github.com/joshcash9/Statistics_BME/blob/master/04_effect_power.pdf)
 
 ## Tips 
 ---
