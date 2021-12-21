@@ -22,7 +22,7 @@ Calculate cohen's d for 2 paired samples. See [Using_cohens_d.ipynb](https://git
 [d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [r](#r)) returns cohen's d for 2 paired samples. [example](#example-1)
 
 ### B 
-[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [Name=Value](#name-value-arguments)) returns cohen's d for 2 paired samples with additional options specified by one or more name-value pair arguments. For example, you can compare to a mean. [example](#example-2)
+[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [r](#r), [Name=Value](#name-value-arguments)) returns cohen's d for 2 paired samples with additional options specified by one or more name-value pair arguments. For example, you can compare to a mean. [example](#example-2)
 
 ## Examples 
 ---
