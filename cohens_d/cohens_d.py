@@ -47,19 +47,20 @@ def cohensd_2ind(group1, group2):
     d = (numpy.mean(group1) - numpy.mean(group2)) / (numpy.sqrt((((len(group1) - 1) * numpy.var(group1, ddof=1)) + ((len(group2) - 1) * numpy.var(group2, ddof=2))) / (len(group1) + len(group2) - 2)))
     return numpy.abs(d)
 
-def cohensd_2paired(pre, post, r, mu=0):
+def cohensd_2paired(pre, post, mu=0):
     '''
     Calculate cohen's d for 2 paired samples 
 
     INPUTS:
     pre: pre data vector 
     post: post data vector 
-    r: pearsons corrleation
     mu: mean to compare, default=0
 
     OUTPUT:
     d: absolute cohen's d 
     '''
     import numpy
+    import scipy.stats
+    r = scipy.stats.pearsonr(pre, post)[0]
     d = numpy.abs((numpy.mean(pre - post) - mu) / (numpy.sqrt(numpy.var(pre, ddof=1) + numpy.var(post, ddof=1) - 2 * r * numpy.std(pre, ddof=1) * numpy.std(post, ddof=1)) / numpy.sqrt(2 * (1 - r))))
     return d 
