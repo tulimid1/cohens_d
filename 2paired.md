@@ -12,17 +12,17 @@ Calculate cohen's d for 2 paired samples. See [Using_cohens_d.ipynb](https://git
 ---
     import cohens_d as cD
 
-[d = cD.cohensd_2paired(pre, post, r)](#a)
+[d = cD.cohensd_2paired(pre, post)](#a)
 
-[d = cD.cohensd_2paired(pre, post, r, Name=Value)](#b)
+[d = cD.cohensd_2paired(pre, post, Name=Value)](#b)
 
 ## Description
 ---
 ### A
-[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [r](#r)) returns cohen's d for 2 paired samples. [example](#example-1)
+[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post)) returns cohen's d for 2 paired samples. [example](#example-1)
 
 ### B 
-[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [r](#r), [Name=Value](#name-value-arguments)) returns cohen's d for 2 paired samples with additional options specified by one or more name-value pair arguments. For example, you can compare to a mean. [example](#example-2)
+[d](#d) = cD.cohensd_2paired([pre](#pre), [post](#post), [Name=Value](#name-value-arguments)) returns cohen's d for 2 paired samples with additional options specified by one or more name-value pair arguments. For example, you can compare to a mean. [example](#example-2)
 
 ## Examples 
 ---
@@ -32,9 +32,9 @@ Generate some random data and find cohen's d.
     mu = np.array([3, 5])
     sigma = np.array([[1, 0.6], [0.6, 3]])
     data = np.random.multivariate_normal(mu, sigma, (100,))
-    cD.cohensd_2paired(data[:,0], data[:,1], stats.pearsonr(data[:,0], data[:,1])[0])
+    cD.cohensd_2paired(data[:,0], data[:,1])
 
-d = 1.4798889031781874
+d = 1.4494613347104766
 
 ### Example 2 
 Generate some random data and calculate cohen's d with mean of 15. 
@@ -42,9 +42,9 @@ Generate some random data and calculate cohen's d with mean of 15.
     mu = np.array([3, 5])
     sigma = np.array([[1, 0.6], [0.6, 3]])
     data = np.random.multivariate_normal(mu, sigma, (100,))
-    cD.cohensd_2paired(data[:,0], data[:,1], stats.pearsonr(data[:,0], data[:,1])[0], mu=15)
+    cD.cohensd_2paired(data[:,0], data[:,1])
     
-d = 11.677274518688368
+d = 12.800599127957925
 
 ## Input Arguments
 ---
@@ -61,13 +61,6 @@ Post data vector.
 Vector of post data
 
 Data Types: (numeric, vector)
-
-### `r`
-Correlation of pre and post. 
-
-Pearson's correlation (r) of pre and post data. 
-
-Data Types: (numeric, scalar)
 
 ### Name-Value Arguments
 
