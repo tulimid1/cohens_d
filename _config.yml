@@ -25,6 +25,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Github, icon: github, url: "https://github.com/tulimid1/"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/duncan-tulimieri-756b99101"}
   - {title: Google Scholar, icon: graduation-cap, url: "https://scholar.google.com/citations?user=dgXjBkMAAAAJ&hl=en&oi=ao"}
+  - {title: Vimeo, icon: vimeo-v, url: "https://vimeo.com/user163681548"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
